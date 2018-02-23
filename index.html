@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <style>
+            canvas { border: 1px solid black; }
+            body { margin: 0 }
+            #info {
+                height: auto;
+            }
+            #info > div {
+                margin-left: 1em;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas></canvas>
+        <div id='info'>
+            <div class='map'>
+                <label>Canvas width:</label>
+                <div class='x'></div>
+                <label>Canvas height:</label>
+                <div class='y'></div>
+            </div>
+            <div class='object'>
+                <label>x:</label>
+                <div class='x'></div>
+                <label>y:</label>
+                <div class='y'></div>
+            </div>
+        </div>
+        <script src='experiments.js'></script>
+    </body>
+</html>
