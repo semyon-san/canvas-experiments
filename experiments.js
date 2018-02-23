@@ -80,8 +80,14 @@ const Entity = function() {
                 if (this.yend() >= canvas.height || this.ystart() <= 0)
                     this.reverseY();
             },
-            bounce: function(object) {
-                this.reverse();
+            bounce: function(entity) {
+                let collidesX = (this.xend() >= entity.xstart()) && (this.xstart() <= entity.xend());
+                let collidesY = (this.yend() >= entity.ystart()) && (this.ystart() <= entity.yend());
+
+                if (collidesX)
+                    this.reverseX();
+                if (collidesY)
+                    this.reverseY();
             },
             setLogger: function(logger) {
                 this.logger = logger;
@@ -177,7 +183,7 @@ const Circle = function(circleRadius, position) {
 }
 
 
-let wall = Rectangle(50, 50, Coordinates(400, 300));
+let wall = Rectangle(50, 400, Coordinates(400, 300));
 let rectangle = Rectangle(100, 100, Coordinates(100, 100));
 let circle = Circle(20, Coordinates(300, 200));
 
