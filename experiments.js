@@ -195,7 +195,7 @@ let divMapHeight = document.querySelector('#info .map .y');
 var entities = [circle, rectangle];
 
 function animate() {
-	window.requestAnimationFrame(animate);
+    window.requestAnimationFrame(animate);
     c.clearRect(0, 0, canvas.width, canvas.height);
 
     for (let entity of entities) {
